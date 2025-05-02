@@ -67,12 +67,7 @@ static void event_loop(LibcameraRaw &app)
 			return;
 		}
 
-		if (!app.EncodeBuffer(std::get<CompletedRequestPtr>(msg.payload), app.RawStream()))
-		{
-			// Keep advancing our "start time" if we're still waiting to start recording (e.g.
-			// waiting for synchronisation with another camera).
-			start_time = now;
-		}
+		app.EncodeBuffer(std::get<CompletedRequestPtr>(msg.payload), app.RawStream());
 	}
 }
 

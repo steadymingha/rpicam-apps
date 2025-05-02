@@ -21,7 +21,7 @@
 
 #include <libcamera/formats.h>
 
-#include "post_processing_stages/postproc_lib.h"
+// #include "post_processing_stages/postproc_lib.h"
 
 namespace fs = std::filesystem;
 
@@ -85,19 +85,19 @@ PostProcessor::~PostProcessor()
 
 void PostProcessor::LoadModules(const std::string &lib_dir)
 {
-	const fs::path path(!lib_dir.empty() ? lib_dir : POSTPROC_LIB_DIR);
-	const std::string ext(".so");
+	// const fs::path path(!lib_dir.empty() ? lib_dir : POSTPROC_LIB_DIR);
+	// const std::string ext(".so");
 
-	if (!fs::exists(path))
-		return;
+	// if (!fs::exists(path))
+	// 	return;
 
-	// Dynamically load all .so files from the system postprocessing lib path.
-	// This will automatically register the stages with the factory.
-	for (auto const &p : fs::recursive_directory_iterator(path))
-	{
-		if (p.path().extension() == ext)
-			dynamic_stages_.emplace_back(p.path().string());
-	}
+	// // Dynamically load all .so files from the system postprocessing lib path.
+	// // This will automatically register the stages with the factory.
+	// for (auto const &p : fs::recursive_directory_iterator(path))
+	// {
+	// 	if (p.path().extension() == ext)
+	// 		dynamic_stages_.emplace_back(p.path().string());
+	// }
 }
 
 void PostProcessor::Read(std::string const &filename)
