@@ -3,7 +3,6 @@ This project provides a CMake-based build of the rpicam-still application, extra
 
 <br>
 <br>
------
 <br>
 
 # rpicam-apps
