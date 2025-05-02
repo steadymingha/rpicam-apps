@@ -1,3 +1,11 @@
+# CMake build of rpicam-still (rpicam-apps v1.6.0)
+This project provides a CMake-based build of the rpicam-still application, extracted from the rpicam-apps repository (version 1.6.0). Other rpicam-apps (e.g., hello, raw) can be built by adding their targets to add_executable().
+
+<br>
+<br>
+-----
+<br>
+
 # rpicam-apps
 This is a small suite of libcamera-based applications to drive the cameras on a Raspberry Pi platform.
 
@@ -8,12 +16,3 @@ Build
 -----
 For usage and build instructions, see the official Raspberry Pi documentation pages [here.](https://www.raspberrypi.com/documentation/computers/camera_software.html#building-libcamera-and-rpicam-apps)
 
-License
--------
-
-The source code is made available under the simplified [BSD 2-Clause license](https://spdx.org/licenses/BSD-2-Clause.html).
-
-Status
-------
-
-[![ToT libcamera build/run test](https://github.com/raspberrypi/rpicam-apps/actions/workflows/rpicam-test.yml/badge.svg)](https://github.com/raspberrypi/rpicam-apps/actions/workflows/rpicam-test.yml)
